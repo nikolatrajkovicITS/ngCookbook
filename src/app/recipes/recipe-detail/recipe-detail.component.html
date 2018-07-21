@@ -14,9 +14,7 @@
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <div
-      class="btn-group"
-      appDropdown>
+    <div class="btn-group" appDropdown>
       <button
         type="button"
         class="btn btn-primary dropdown-toggle">
@@ -33,7 +31,8 @@
                style="cursor: pointer;">Edit Recipe
           </a>
         </li>
-        <li><a style="cursor: pointer;">Delete Recipe</a></li>
+        <li><a style="cursor: pointer;"
+                (click)="onDeleteRecipe()">Delete Recipe</a></li>
       </ul>
     </div>
   </div>
