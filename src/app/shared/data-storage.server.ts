@@ -15,9 +15,19 @@ export class DataStorageService {
 
   getRecipes() {
     return this.http.get(this.apiUrl)
-      .subscribe(
-        (response: Response) => {
-          const recipes: Recipe = response.json();
+    .map(
+      (response: Response) => {
+        const recipes: Recipe = response.json();
+        for (let recipe of recipes) {
+          if (!recipe['ingredients']) {
+            console.log(recipe);
+            recipe['ingredients'] = [];
+          }
+        }
+        return recipes;
+      }
+    ).subscribe(
+        (recipes: Recipes[]) => {
           this.recipeService.setRecipes(recipes);
         }
       );
