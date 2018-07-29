@@ -1,4 +1,4 @@
-import { RecipeService } from './../recipes/recipe.service';
+import { RecipeService } from '../recipes/recipe.service';
 import { Injectable } from "@angular/core";
 import { Http, Response } from '@angular/http';
 import { Recipe } from '../recipes/recipe.model';
