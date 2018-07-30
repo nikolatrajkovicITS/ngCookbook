@@ -1,5 +1,5 @@
 import {Response} from '@angular/http';
-import { DataStorageService } from './../shared/data-storage.server';
+import { DataStorageService } from '../shared/data-storage.server';
 import { Component } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 
