@@ -3,10 +3,16 @@
     <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-xs-12">
+<<<<<<< HEAD
           <button
             type="submit"
             class="btn btn-success"
             [disabled]="!recipeForm.valid">Save</button>
+=======
+          <button type="submit"
+                  class="btn btn-success"
+                  [disabled]="!recipeForm.valid">Save</button>
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
           <button type="button" class="btn btn-danger" (click)="onCancel()">Cancel</button>
         </div>
       </div>
@@ -26,12 +32,20 @@
         <div class="col-xs-12">
           <div class="form-group">
             <label for="imagePath">Image URL</label>
+<<<<<<< HEAD
             <input
               type="text"
               id="imagePath"
               formControlName="imagePath"
               class="form-control"
               #imagePath>
+=======
+            <input type="text"
+                   id="imagePath"
+                   formControlName="imagePath"
+                   class="form-control"
+                   #imagePath>
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
           </div>
         </div>
       </div>
@@ -73,19 +87,32 @@
                 formControlName="amount">
             </div>
             <div class="col-xs-2">
+<<<<<<< HEAD
               <button
                 type="button"
                 class="btn btn-danger"
                 (click)="onDeleteIngredient(i)">X</button>
+=======
+                <button class="btn btn-danger"
+                        type="button"
+                        (click)="onDeleteIngredient(i)">X</button>
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
             </div>
           </div>
           <hr>
           <div class="row">
             <div class="col-xs-12">
+<<<<<<< HEAD
               <button
                 type="button"
                 class="btn btn-success"
                 (click)="onAddIngredient()">Add Ingredient</button>
+=======
+              <button class="btn btn-success"
+                      (click)="onAddIngredient()">
+                      Add Ingredient
+              </button>
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
             </div>
           </div>
         </div>

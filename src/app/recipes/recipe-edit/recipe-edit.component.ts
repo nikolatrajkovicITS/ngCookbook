@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 
 import { RecipeService } from '../recipe.service';
+=======
+import { RecipeService } from '../recipe.service';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { FormGroup, FormArray, FormControl, Validators } from '@angular/forms';
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
 
 @Component({
   selector: 'app-recipe-edit',
@@ -16,8 +23,12 @@ export class RecipeEditComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private recipeService: RecipeService,
+<<<<<<< HEAD
               private router: Router) {
   }
+=======
+              private router: Router) { }
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
 
   ngOnInit() {
     this.route.params
@@ -31,6 +42,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   onSubmit() {
+<<<<<<< HEAD
     // const newRecipe = new Recipe(
     //   this.recipeForm.value['name'],
     //   this.recipeForm.value['description'],
@@ -40,6 +52,12 @@ export class RecipeEditComponent implements OnInit {
       this.recipeService.updateRecipe(this.id, this.recipeForm.value);
     } else {
       this.recipeService.addRecipe(this.recipeForm.value);
+=======
+    if (this.editMode) {
+      this.recipeService.updateRecipe(this.id, this.recipeForm.value);
+    } else {
+        this.recipeService.addRecipe(this.recipeForm.value);
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
     }
     this.onCancel();
   }
@@ -102,4 +120,14 @@ export class RecipeEditComponent implements OnInit {
     });
   }
 
+<<<<<<< HEAD
+=======
+  onCancel() {
+    this.router.navigate(['../'], {relativeTo: this.route});
+  }
+
+  onDeleteIngredient(index: number) {
+    (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
+  }
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
 }

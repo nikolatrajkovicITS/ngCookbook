@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+<<<<<<< HEAD
 
+=======
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -20,5 +23,8 @@ export class SignupComponent implements OnInit {
     const password = form.value.password;
     this.authService.signupUser(email, password);
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
 }

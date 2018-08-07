@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import { Subscription } from 'rxjs/Subscription';
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
@@ -20,12 +24,20 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
+<<<<<<< HEAD
     this.subscription = this.recipeService.recipesChanged
       .subscribe(
         (recipes: Recipe[]) => {
           this.recipes = recipes;
         }
       );
+=======
+    this.subscription = this.recipeService.recipeChanged.subscribe(
+      (recipes: Recipe[]) => {
+        this.recipes = recipes;
+      }
+    );
+>>>>>>> 278d18a2748b58c9c2111204daa2d95352fd7371
     this.recipes = this.recipeService.getRecipes();
   }
 
